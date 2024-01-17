@@ -15,7 +15,6 @@ public class GInventory
     {
         foreach (GameObject i in items)
         {
-            Debug.Log(i);
             if (i.tag == tag)
             {
                 return i;

@@ -12,7 +12,6 @@ public class Wander : GAction
         UnityEngine.AI.NavMeshHit hit;
         UnityEngine.AI.NavMesh.SamplePosition(randomDirection, out hit, walkRadius, 1);
         target = new GameObject("Agent destination");
-        Debug.Log(hit.position);
         target.transform.position = hit.position;
 
         return true;

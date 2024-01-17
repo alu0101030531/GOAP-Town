@@ -28,7 +28,6 @@ public class RecommendStore : GAction
     {
         GameObject checkOutArea = this.gameObject.transform.Find("Check-Out Area").gameObject;
         GameObject foodInStore = this.GetComponent<Store>().GetFood(food);
-        Debug.Log(foodInStore);
         if (foodInStore == null)
             return false;
         citizen.GetComponent<GAgent>().inventory.AddItem(checkOutArea);

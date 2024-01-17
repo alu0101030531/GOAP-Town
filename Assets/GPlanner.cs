@@ -41,7 +41,6 @@ public class GPlanner
 
         foreach (GAction a in actions)
         {
-            Debug.Log(a);
             if (a.IsAchievable())
             {
                 usableActions.Add(a);

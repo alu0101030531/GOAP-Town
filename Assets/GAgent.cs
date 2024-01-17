@@ -35,7 +35,6 @@ public class GAgent : MonoBehaviour
     {
         GAction[] acts = this.GetComponents<GAction>();
         foreach (GAction a in acts) {
-            Debug.Log(a);
             actions.Add(a);
     }
     }
@@ -52,7 +51,6 @@ public class GAgent : MonoBehaviour
     private bool CanReachPosition(Vector3 position) {
         UnityEngine.AI.NavMeshPath path = new UnityEngine.AI.NavMeshPath();
         currentAction.agent.CalculatePath(position, path);
-        Debug.Log(path.status);
         return path.status == UnityEngine.AI.NavMeshPathStatus.PathComplete;
     }
 
